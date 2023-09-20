@@ -35,11 +35,11 @@ extern char **environ;
  */
 typedef struct shell_data
 {
-    char *name;
-    int process;
-    int status;
-    char **tokens;
-    char *line;
+	char *name;
+	int process;
+	int status;
+	char **tokens;
+	char *line;
 } sh_data;
 
 /**
