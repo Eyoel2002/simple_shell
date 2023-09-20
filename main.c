@@ -10,18 +10,18 @@
 
 int main(int ac, char **av)
 {
-    sh_data shell; // Initialize the shell data structure.
-    (void)ac; // Suppress unused parameter warning.
+	sh_data shell;
+	(void)ac;
 
-    shell.process = 0; // Initialize the process count.
-    shell.status = 0; // Initialize the shell status.
-    shell.name = *av; // Set the shell name to the program's name.
-    shell.line = NULL; // Initialize the input command line pointer.
+	shell.process = 0;
+	shell.status = 0;
+	shell.name = *av;
+	shell.line = NULL;
 
-    if (isatty(STDIN_FILENO))
-        interactive(&shell); // Run the interactive shell mode.
-    else
-        non_interactive(&shell); // Run the non-interactive shell mode.
+	if (isatty(STDIN_FILENO))
+		interactive(&shell);
+	else
+		non_interactive(&shell);
 
-    return (shell.status); // Return the shell's exit status.
+	return (shell.status);
 }
