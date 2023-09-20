@@ -1,10 +1,16 @@
 #include "shell.h"
 
 /**
+<<<<<<< HEAD
  * count_tokens - Count the number of tokens in a line.
  * @line: A pointer to the input line.
  * @line: A pointer to the line string.
  * @return: The number of tokens found, or -1 if an error occurs.
+=======
+ * count_tokens - finds the number of tokens
+ * @line: pointer to line string
+ * Return: number of tokens
+>>>>>>> 27b18f61b903ac40a6b503a540de870866c15271
  */
 int count_tokens(char *line)
 {
@@ -28,12 +34,18 @@ int count_tokens(char *line)
 }
 
 /**
+<<<<<<< HEAD
  * tokenize - Tokenize a line string into an array of string pointers.
  * @line: A pointer to the input line.
  *
  * @line: A pointer to the line string.
  * @return: An array of string pointers containing the tokens, or NULL
  *          if an error occurs or no tokens are found.
+=======
+ * tokenize - parses the line string into an array of string pointers
+ * @line: pointer to  line string
+ * Return: tokenized string
+>>>>>>> 27b18f61b903ac40a6b503a540de870866c15271
  */
 char **tokenize(char *line)
 {
@@ -41,7 +53,11 @@ char **tokenize(char *line)
 	char **tokens;
 	int i = 0, count;
 	char *line_copy, *token;
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 27b18f61b903ac40a6b503a540de870866c15271
 	line_copy = _strdup(line);
 	if (line_copy == NULL)
 		return (NULL);
@@ -62,7 +78,11 @@ char **tokenize(char *line)
 		i++;
 	}
 	tokens[i] = NULL;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 27b18f61b903ac40a6b503a540de870866c15271
 	free(line_copy);
 	return (tokens);
 }
+
